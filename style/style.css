@@ -1,0 +1,1013 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+.container{
+    background-color: yellow;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    position: relative;
+}
+.container .main{
+    font-weight: bold;
+    font-size: 62px;
+    color: blue;
+    box-shadow: 0px 0px 20px 6px red inset;
+    text-shadow: 2px 2px 2px white, 2px -2px 2px white, -2px 2px 2px white, -2px -2px 2px white;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+.container .login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+.container .login .account{
+    background-color: greenyellow;
+    height: 25px;
+    width: 90px;
+    font-weight:bold;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    text-shadow: 1px 1px 2px red, 1px -1px 2px red, -1px 1px 2px red, -1px -1px 2px red;
+    transition-duration: 0.2s;
+}
+.container .login .account:hover{
+    background-color: white;
+    color: red;
+    text-shadow: 1px 1px 2px greenyellow, 1px -1px 2px greenyellow, -1px 1px 2px greenyellow, -1px -1px 2px greenyellow;
+}
+.container .login a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition-duration: 0.2s;
+}
+.container .login a:hover{
+    background-color: white;
+    color: red;
+}
+@media screen and (max-width:700px){
+    .container{
+        justify-content: flex-start;
+    }
+    .container .main{
+        font-size: 30px;
+        margin-left: 20px;
+        border-radius: 15px;
+        padding: 5px 20px;
+    }
+    .container .login b{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:480px){
+    .container{
+        height: 70px;
+    }
+    .container .main{
+        font-size: 20px;
+    }
+    .container .login{
+        flex-direction: column;
+        top: 25%;
+    }
+    .container .login a{
+        font-size: 10px;
+        height: 18px;
+        width: 80px;
+        margin-bottom: 4px;
+    }
+    .container .login b{
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        width: 130px;
+        font-size: 11px;
+    }
+    .container .login .account{
+        top: -5px;
+        height: 20px;
+        width: 80px;
+    }
+    .container .login .logout{
+        position: absolute;
+        top: 23px;
+        right: 0px;
+    }
+}
+@media screen and (max-width:380px){
+    .container{
+        height: 50px;
+    }
+    .container .main{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .container .login b{
+        right: 10px;
+        font-size: 7px;
+    }
+    .container .login a{
+        font-size: 8px;
+        height: 15px;
+        width: 70px;
+    }
+    .container .login .account{
+        top: -3px;
+        height: 15px;
+        width: 70px;
+    }
+    .container .login .logout{
+        top: 15px;
+    }
+}
+
+/* navbar */
+
+.navbar{
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0px 1px;
+    font-size: 20px;
+    cursor: pointer;
+    background: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+}
+.navbar a:hover{
+    color: white;
+    background-color: rgb(75, 29, 227);
+}
+@media screen and (max-width:700px){
+    .navbar{
+        height: 30px;
+    }
+    .navbar a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:480px){
+    .navbar{
+        height: 25px;
+    }
+    .navbar a{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:380px){
+    .navbar{
+        height: 15px;
+    }
+    .navbar a{
+        font-size: 10px;
+        margin-left: 0.5px;
+    }
+}
+
+/* news-container */
+
+.news-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.news-container .news{
+    width: 55%;
+    background-color: rgb(202, 241, 197);
+    padding: 30px;
+    min-height: 840px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.news-container .news h1{
+    border-left:5px solid red;
+    margin-left:10px;
+    color:green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    padding:0px 5px;
+}
+.news-container .news .news-item-container{
+    height: 700px;
+}
+.news-container .news .news-item-container .news-item{
+    border-bottom: 1px solid black;
+    display: flex;
+}
+.news-container .news .news-item-container .news-item .image{
+    margin:10px;
+    height: 100px;
+    width: 80px;
+    transition-duration: 0.3s;
+}
+.news-container .news .news-item-container .news-item .image:hover{
+    outline: 2px solid rgb(0, 255, 30);
+}
+.news-container .news .news-item-container .news-item .image img{
+    height:100px;
+    width:80px;
+}
+.news-container .news .news-item-container .news-item div{
+    margin: 10px;
+    width: 80%;
+    font-size: 14px;
+}
+.news-container .news .news-item-container .news-item div .title{
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+.news-container .news .news-item-container .news-item div .title:hover{
+    color: rgb(0, 255, 30);
+}
+.news-container .news .news-item-container .news-item div .features{
+    margin-left: 3px;
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+.news-container .news .news-item-container .news-item div .features:hover{
+    color: rgb(0, 255, 30);
+}
+.news-container .news .news-item-container .news-item div span{
+    margin-left: 3px;
+}
+.news-container .news .news-item-container .news-item div p{
+    text-align: justify;
+}
+.news-container .news .news-item-container .news-item div p a{
+    margin-left: 10px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.news-container .news .news-item-container .news-item div p a:hover{
+    color: rgb(0, 255, 30);
+}
+
+/* pagination */
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.pagination a{
+    background-color: rgb(7, 253, 7);
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 10px 2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.pagination a:hover{
+    background-color: greenyellow;
+}
+
+/* sidebar-news-container */
+
+.news-container .sidebar{
+    width: 40%;
+    min-height: 650px;
+}
+.news-container .sidebar .searchbar{
+    height: 50px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(153, 120, 246);
+    border-radius: 5px 5px 0px 0px;
+}
+.news-container .sidebar .searchbar form .search{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 140px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(115, 240, 240);
+}
+.news-container .sidebar .searchbar form .btn{
+    height: 25px;
+    width: 70px;
+    outline: none;
+    border: none;
+    margin-left: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(6, 209, 6);
+    transition-duration: 0.2s;
+}
+.news-container .sidebar .searchbar form .btn:hover{
+    background-color: white;
+    color: rgb(6, 209, 6);
+}
+.news-container .sidebar .searchbar a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    height: 25px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+.news-container .sidebar .searchbar a:hover{
+    outline: 1px solid red;
+    color: red;
+    background-color: white;
+}
+.news-container .sidebar .recentbar{
+    margin-right: 15px;
+    height: 600px;
+    margin-top: 10px;
+    background-color: rgb(202, 241, 197);
+    padding: 15px;
+    border-radius: 0px 0px 5px 5px;
+}
+.news-container .sidebar .recentbar .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(0, 0, 255);
+    font-family:cursive;
+}
+.news-container .sidebar .recentbar .heading hr{
+    background-color: rgb(0, 255, 38);
+}
+.news-container .sidebar .recentbar marquee{
+    margin-top: 20px;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news{
+    width: 80%;
+    display: flex;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news .image{
+    margin:10px;
+    height: 70px;
+    width: 55px;
+    transition-duration: 0.3s;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news .image img{
+    height:70px;
+    width:55px;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news .image:hover{
+    outline: 1px solid rgb(0, 255, 30);
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div{
+    margin: 10px;
+    width: auto;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .title{
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .title:hover{
+    color: rgb(0, 255, 30);
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .category{
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .category:hover{
+    color: rgb(0, 255, 30);
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .read{
+    margin-left: 5px;
+    margin-top: 7px;
+    display: block;
+    color: white;
+    width: 75px;
+    font-size: 13px;
+    border-radius: 4px;
+    background-color: rgb(32, 32, 241);
+    padding: 2px 5px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .read:hover{
+    border: 1px solid rgb(32, 32, 241);
+    background-color: white;
+    color: rgb(32, 32, 241);
+}
+
+/* media query of news-container and sidebar */
+
+@media screen and (max-width:750px){
+    .news-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 30px;
+    }
+    .news-container .news{
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+        min-height: 700px;
+        position: relative;
+    }
+    .news-container .news h1{
+        position: absolute;
+        top: 5px;
+        border-left:4px solid red;
+        font-size: 25px;
+        padding:0px 3px;
+    }
+    .news-container .news .news-item-container{
+        height: 700px;
+        margin-top: 10px;
+    }
+    .news-container .sidebar{
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+    .news-container .sidebar .searchbar{
+        margin: auto;
+        width: 100%;
+        position: absolute;
+        top: -930px;
+        border-radius: 5px;
+    }
+    .news-container .sidebar .recentbar{
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width:500px){
+    .news-container .news{
+        padding: 10px;
+        margin-top: 35px;
+        min-height: 560px;
+    }
+    .news-container .news h1{
+        font-size: 15px;
+    }
+    .news-container .news .news-item-container{
+        height: 580px;
+    }
+    .news-container .news .news-item-container .news-item .image{
+        height: 80px;
+        width: 60px;
+    }
+    .news-container .news .news-item-container .news-item .image img{
+        height: 80px;
+        width: 60px;
+    }
+    .news-container .news .news-item-container .news-item div{
+        margin: 10px;
+        width: 80%;
+        font-size: 10px;
+    }
+    .pagination a{
+        font-size: 13px;
+    }
+    .news-container .sidebar .searchbar{
+        height: 40px;
+        top: -750px;
+    }
+    .news-container .sidebar .searchbar form .search{
+        height: 25px;
+        width: 140px;
+        font-size: 15px;
+    }
+    .news-container .sidebar .searchbar form .btn{
+        height: 25px;
+        width: 60px;
+        font-size: 13px;
+        margin-left: 2px;
+    }
+    .news-container .sidebar .searchbar a{
+        font-size: 15px;
+        height: 27px;
+        width: 75px;
+    }
+    .news-container .sidebar .recentbar{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:380px){
+    .news-container{
+        padding: 10px;
+    }
+    .news-container .news{
+        padding: 10px;
+        margin-top: 0px;
+        min-height: 430px;
+    }
+    .news-container .news h1{
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .news-container .news .news-item-container{
+        height: 450px;
+    }
+    .news-container .news .news-item-container .news-item .image{
+        height: 70px;
+        width: 55px;
+        margin: 5px;
+    }
+    .news-container .news .news-item-container .news-item .image img{
+        height: 70px;
+        width: 55px;
+    }
+    .news-container .news .news-item-container .news-item div{
+        font-size: 10px;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .pagination{
+        margin-top: 60px;
+    }
+    .pagination a{
+        font-size: 10px;
+    }
+    .news-container .sidebar{
+        min-height: 450px;
+    }
+    .news-container .sidebar .searchbar{
+        height: 25px;
+        top: -605px;
+    }
+    .news-container .sidebar .searchbar form .search{
+        height: 17px;
+        width: 80px;
+        font-size: 12px;
+    }
+    .news-container .sidebar .searchbar form .btn{
+        height: 17px;
+        width: 40px;
+        font-size: 10px;
+        margin-left: 0px;
+    }
+    .news-container .sidebar .searchbar a{
+        font-size: 10px;
+        height: 17px;
+        width: 50px;
+    }
+    .news-container .sidebar .recentbar{
+        height: 400px;
+        font-size: 10px;
+    }
+    .news-container .sidebar .recentbar marquee{
+        height: 300px;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news{
+        width: 90%;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news .image{
+        margin:5px;
+        height: 50px;
+        width: 40px;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news .image img{
+        height: 50px;
+        width: 40px;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news div{
+        margin: 0px;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news div span{
+        margin-left: 1px;
+    }
+    .news-container .sidebar .recentbar marquee .recent-news-container .recent-news div .read{
+        margin-left: 0px;
+        margin-top: 2px;
+        width: 70px;
+        font-size: 12px;
+        padding: auto;
+    }
+}
+
+/* footer */
+
+footer{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media screen and (max-width:500px){
+    footer{
+        font-size: 15px;
+        height: 30px;
+    }
+}
+@media screen and (max-width:380px){
+    footer{
+        font-size: 10px;
+        height: 25px;
+    }
+}
+
+/* post page styling */
+
+.postTitle{
+    height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    color: whitesmoke;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgb(156, 67, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:black;
+}
+.content{
+    min-height: 480px;
+    background-color: grey;
+}
+.content .about{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:rgb(251, 227, 227);
+    text-shadow: 2px 2px 1px rgb(90, 0, 174);
+    font-family:cursive;
+    margin-top: 1px;
+}
+.content .image{
+    text-align: center;
+}
+.content .image img{
+    height: 300px;
+}
+.content p{
+    margin-top: 10px;
+    text-indent: 30px;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: black;
+    text-align: justify;
+    font-family: cursive;
+}
+
+/* media query of post page */
+
+@media screen and (max-width:750px){
+    .content .about{
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .content .image img{
+        height: 200px;
+    }
+    .content p{
+        text-indent: 25px;
+    }
+}
+@media screen and (max-width:500px){
+    .postTitle{
+        height: 40px;
+        font-size: 25px;
+    }
+    .content .about{
+        font-size: 13px;
+    }
+    .content .image img{
+        height: 150px;
+    }
+    .content p{
+        text-indent: 20px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:380px){
+    .postTitle{
+        height: 25px;
+        font-size: 19px;
+    }
+    .content .about{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .content .image img{
+        height: 100px;
+    }
+    .content p{
+        text-indent: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Registration/Login/Add post/Update Post from styling */
+
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: skyblue;
+}
+.form form{
+    font-family: cursive;
+    background-image: linear-gradient(rgb(50, 229, 245),white,rgb(135, 246, 135));
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+.form form table tr td{
+    padding: 5px;
+}
+.form form table tr td input,.form form table tr td textarea,.form form table tr td select{
+    padding: 3px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    resize: none;
+}
+.form form table tr td input.submit{
+    margin-top: 5px;
+    width: 50%;
+    font-weight: bold;
+    border: none;
+    font-size: 18.6px;
+    color: white;
+    background: blue;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+.form form table tr td input.submit:hover{
+    color: blue;
+    background: white;
+}
+.form form table tr td a{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+.form form table tr td a:hover{
+    color: rgb(4, 208, 4);
+}
+
+/* media query of Registration/Login/Add post/Update Post form */
+
+@media screen and (max-width:500px){
+    .form form table tr td{
+        font-size: 13px;
+    }
+    .form form table tr td input,.form form table tr td textarea,.form form table tr td select{
+        font-size: 13px;
+    }
+    .form form table tr td input.submit{
+        font-size: 15px;
+    }
+    .form form table tr td a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:380px){
+    .form form table tr td{
+        font-size: 12px;
+    }
+    .form form table tr td input,.form form table tr td textarea,.form form table tr td select{
+        font-size: 12px;
+    }
+    .form form table tr td a{
+        font-size: 10px;
+    }
+}
+
+/* mypost/allpost/allcategory/users page styling */
+
+.all-post{
+    font-size: 30px;
+    font-weight: bold;
+    margin:  10px 20px;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.all-post a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 110px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.all-post a:hover{
+    outline: 1px solid red;
+    color: red;
+    background-color: white;
+}
+.posts{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: cursive;
+}
+.posts table{
+    width: 90%;
+}
+.posts table thead tr{
+    height: 40px;
+}
+.posts table thead tr th{
+    padding: 1px;
+}
+.posts table tbody tr td{
+    padding: 1px;
+}
+.posts table tbody tr td img{
+    height: 90px;
+}
+.posts table tbody .no-post td{
+    padding: 1px;
+    font-size: 20px;
+    height: 40vh;
+}
+.posts table tbody .no-post td a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+.posts table tbody .no-post td a:hover{
+    outline: 1px solid red;
+    color: red;
+    background-color: white;
+}
+.posts table tbody .main-post td a{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 1px 7px;
+    border-radius: 5px;
+    margin-left: 3px;
+    transition-duration: 0.2s;
+}
+.posts table tbody .main-post td a:hover{
+    outline: 1px solid red;
+    color: red;
+    background-color: white;
+}
+.posts table tbody .main-post td a:nth-child(1){
+    background-color: rgb(0, 179, 0);
+}
+.posts table tbody .main-post td a:nth-child(1):hover{
+    outline: 1px solid rgb(0, 179, 0);
+    color: rgb(0, 179, 0);
+    background-color: white;
+}
+.posts table tbody .main-post td a:nth-child(2){
+    background-color: rgb(46, 46, 243);
+}
+.posts table tbody .main-post td a:nth-child(2):hover{
+    outline: 1px solid rgb(46, 46, 243);
+    color: rgb(46, 46, 243);
+    background-color: white;
+}
+
+/* media query of mypost/allpost/allcategory/users table */
+
+@media screen and (max-width:700px){
+    .all-post{
+        font-size: 20px;
+    }
+    .all-post a{
+        font-size: 15px;
+        height: 25px;
+        width: 80px;
+    }
+    .posts table thead tr{
+        font-size: 12px;
+        height: 30px;
+    }
+    .posts table tbody .main-post td{
+        font-size: 12px;
+    }
+    .posts table tbody tr td img{
+        height: 60px;
+    }
+    .posts table tbody .main-post td a{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:550px){
+    .all-post{
+        font-size: 15px;
+    }
+    .all-post a{
+        font-size: 10px;
+        height: 20px;
+        width: 60px;
+    }
+    .posts table thead tr{
+        font-size: 9px;
+        height: 20px;
+    }
+    .posts table tbody .main-post td{
+        font-size: 9px;
+    }
+    .posts table tbody tr td img{
+        height: 40px;
+    }
+    .posts table tbody .main-post td a{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width:380px){
+    .all-post{
+        font-size: 12px;
+    }
+    .all-post a{
+        font-size: 8px;
+        height: 15px;
+        width: 50px;
+    }
+    .posts table thead tr{
+        font-size: 9px;
+        height: 15px;
+    }
+    .posts table tbody .main-post td{
+        font-size: 9px;
+    }
+    .posts table tbody tr td img{
+        height: 20px;
+    }
+    .posts table tbody .main-post td a{
+        font-size: 9px;
+        margin-left: 0.2px;
+        padding: 0px 3px;
+    }
+}
