@@ -24,7 +24,7 @@
             $page_index=1;
         }
         $offset=($limit*$page_index)-$limit;
-        $sql="select count(`post_id`) as 'number',`User-Id`,`First-Name`,`Last-Name`,`Username`,`Password` from post left join user on post.`Author-id`=user.`User-Id` group by `User-Id` limit $offset,$limit";
+        $sql="select count(`post_id`) as 'number',`User-Id`,`First-Name`,`Last-Name`,`Username`,`Password` from user left join post on post.`Author-id`=user.`User-Id` group by `User-Id` limit $offset,$limit";
         $result=mysqli_query($conn,$sql);
         ?>
         <div class="all-post">Users<a href="newpost.php">Add Post</a></div>

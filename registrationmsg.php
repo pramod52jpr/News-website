@@ -6,7 +6,7 @@ if(!isset($_POST['username'])){
 }
 $first_name=$_POST['fname'];
 $last_name=$_POST['lname'];
-$username=mysqli_real_escape_string($conn,$_POST['username']);
+$username=$_POST['username'];
 $password=md5($_POST['password']);
 
 $sql2="select * from user where `Username`='$username' and `Password`='$password';";
