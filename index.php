@@ -28,12 +28,13 @@
                             </div>
                         </div>";
                         }
-                    } 
-                    shuffle($post);
-                    foreach($post as $value){
-                        echo $value;
-                    }
-                    ?>
+                        shuffle($post);
+                        foreach($post as $value){
+                            echo $value;
+                        }
+                    } else{ ?>
+                        <h2 style="text-align:center;color:red">No Result Found</h2>
+                    <?php } ?>
                 </div>
                 <div class="pagination">
                     <?php if($page_index>1){ ?>

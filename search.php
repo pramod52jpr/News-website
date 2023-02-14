@@ -25,7 +25,7 @@
                         </div>
                     <?php  }
                     } else{ ?>
-                        <h2 style="text-align:center;margin-top:100px;color:red">No Result Found</h2>
+                        <h2 style="text-align:center;color:red">No Result Found</h2>
                     <?php } ?>
                 </div>
                 <div class="pagination">
