@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "conn.php";
-if(!isset($_SESSION['user_name'])){
+if(!isset($_SESSION['email'])){
     if(!isset($_POST['post_id'])){
         Header("Location: $secure://$hostname");
     }

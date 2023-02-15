@@ -17,7 +17,7 @@ include "conn.php";
         <div class="main">News</div>
         <div class="login">
             <?php 
-            if(isset($_SESSION['user_name']) and isset($_SESSION['pass_word'])){
+            if(isset($_SESSION['email']) and isset($_SESSION['pass_word'])){
                 echo "<b>Hello, ". $_SESSION['first_name']."</b>";?>
             <a class="account" href="mypost.php">My Account</a>
             <a  class="logout" href="logout.php">Logout</a>

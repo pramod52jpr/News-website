@@ -1,11 +1,11 @@
         <?php include 'header.php'; ?>
         <?php
-        if(isset($_SESSION['user_name'])){
+        if(isset($_SESSION['email'])){
             Header("Location: $secure://$hostname");
         }
         ?>
         <div class="form">
-            <form action="registrationmsg.php" method="post">
+            <form action="confirm.php" method="post">
                 <table>
                     <tr>
                         <td><label for="fname">First Name </label></td><td>: <input type="text" placeholder="Enter First Name" name="fname" id="fname" required></td>
@@ -14,7 +14,7 @@
                         <td><label for="lname">Last Name </label></td><td>: <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required></td>
                     </tr>
                     <tr>
-                        <td><label for="username">Username </label></td><td>: <input type="text" placeholder="e.g. yourname@123" name="username" id="username" required></td>
+                        <td><label for="email">Email </label></td><td>: <input type="email" placeholder="Enter Your Email" name="email" id="email" required></td>
                     </tr>
                     <tr>
                         <td><label for="password">Password </label></td><td>: <input type="password" placeholder="Enter Your Password" maxlength="8" name="password" id="password" required></td>

@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
         <?php
-        if(!isset($_SESSION['user_name'])){
+        if(!isset($_SESSION['email'])){
                 Header("Location: $secure://$hostname");
         }
         ?>

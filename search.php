@@ -25,7 +25,7 @@
                         </div>
                     <?php  }
                     } else{ ?>
-                        <h2 style="text-align:center;color:red">No Result Found</h2>
+                        <h2 style="text-align:center;margin-top:60px;color:red">No Result Found</h2>
                     <?php } ?>
                 </div>
                 <div class="pagination">
@@ -52,7 +52,7 @@
                         <input class="btn" type="submit" value="Search">
                     </form>
                     <?php 
-                    if(isset($_SESSION['user_name']) and isset($_SESSION['pass_word'])){
+                    if(isset($_SESSION['email']) and isset($_SESSION['pass_word'])){
                     ?>
                     <a href="newpost.php">Add Post</a>
                     <?php } ?>

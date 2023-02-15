@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
         <?php
-        if(!isset($_SESSION['user_name'])){
+        if(!isset($_SESSION['email'])){
             Header("Location: $secure://$hostname");
         }else{
             $sql6="select `admin` from user where `User-Id`=$_SESSION[user_id]";

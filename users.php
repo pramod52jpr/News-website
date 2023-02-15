@@ -1,6 +1,6 @@
         <?php include 'header.php'; ?>
         <?php
-        if(!isset($_SESSION['user_name'])){
+        if(!isset($_SESSION['email'])){
             Header("Location: $secure://$hostname");
         }else{
             $sql6="select `admin` from user where `User-Id`=$_SESSION[user_id]";
@@ -24,7 +24,7 @@
             $page_index=1;
         }
         $offset=($limit*$page_index)-$limit;
-        $sql="select count(`post_id`) as 'number',`User-Id`,`First-Name`,`Last-Name`,`Username`,`Password` from user left join post on post.`Author-id`=user.`User-Id` group by `User-Id` limit $offset,$limit";
+        $sql="select count(`post_id`) as 'number',`User-Id`,`First-Name`,`Last-Name`,`Email`,`Password` from user left join post on post.`Author-id`=user.`User-Id` group by `User-Id` limit $offset,$limit";
         $result=mysqli_query($conn,$sql);
         ?>
         <div class="all-post">Users<a href="newpost.php">Add Post</a></div>
@@ -36,7 +36,7 @@
                         <th>User_Id</th>
                         <th>Authors</th>
                         <th>No. of Posts</th>
-                        <th>Username</th>
+                        <th>Email</th>
                         <th>Password</th>
                     </tr>
                 </thead>
@@ -51,7 +51,7 @@
                             <td><?php echo $row['User-Id'] ?></td>
                             <td><?php echo $row['First-Name'].' '.$row['Last-Name'] ?></td>
                             <td><?php echo $row['number'] ?></td>
-                            <td><?php echo $row['Username'] ?></td>
+                            <td><?php echo $row['Email'] ?></td>
                             <td><?php echo $row['Password'] ?></td>
                         </tr>
                     <?php $sr++; }
